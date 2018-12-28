@@ -1,6 +1,8 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
+const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 
 const htmlPlugin = new HtmlWebpackPlugin({
   template: "./src/index.html",
@@ -16,6 +18,20 @@ module.exports = {
     "./src/index.js",
     "./src/index.scss"
   ],
+  optimization: {
+    minimizer: [
+      new UglifyJsPlugin({
+        cache: true,
+        parallel: true,
+        sourceMap: true
+      }),
+      new OptimizeCSSAssetsPlugin({
+        cssProcessorPluginOptions: {
+          preset: ["default", { discardComments: { removeAll: true } }]
+        }
+      })
+    ]
+  },
   module: {
     rules: [
       {
