@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css?family=Archivo+Narrow:400,500,600,700|Merriweather');
+
+$color-primary: #ffe700;
+$font-sans: "Archivo Narrow", sans-serif;
+$font-serif: "Merriweather", serif;
+
+html {
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+body {
+  margin: 0;
+  padding: 2rem;
+  font-family: $font-serif;
+  background-color: #f9f9f9;
+}
+
+.intro {
+  margin-bottom: 2rem;
+  font-style: italic;
+  font-size: 1rem;
+  font-weight: 400;
+
+  @media (min-width: 40rem) {
+    margin-bottom: 5rem;
+    text-align: right;
+  }
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+  border-bottom: 1px solid #000;
+
+  &:hover {
+    background: $color-primary;
+  }
+}
+
+@import "components/resume/resume";
+@import "components/entry/entry";
+@import "components/section/section";

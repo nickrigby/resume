@@ -1,0 +1,24 @@
+.entry {
+  margin: 2rem 0;
+}
+
+.entry__title {
+  margin: 0;
+  font-family: $font-sans;
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+.entry__date {
+  font-family: $font-sans;
+}
+
+.entry__list {
+  margin: 1rem 0;
+  padding: 0;
+
+  li {
+    margin: .25rem 0;
+    list-style: none;
+  }
+}

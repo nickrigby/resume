@@ -1,0 +1,9 @@
+.resume {
+  max-width: 85rem;
+  padding: 0;
+
+  @media (min-width: 40rem) {
+    padding-left: 2rem;
+    padding-right: 1rem 2rem;
+  }
+}
